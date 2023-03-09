@@ -1,0 +1,65 @@
+<div id="utility">
+	<ul id="nav">
+		<li class="active"><a href="<#ACTION action="99">">Logoff <#PARAM name="Username"></a></li>
+		<li class="active"><a href="<#ACTION action="10" form="10">">Main Menu</a></li>
+		<li class="active"><a href="#">New Request</a>
+			<ul>
+				<li class="first"><a href="<#ACTION action="10" form="20" value="GenericRequestManuscript">">Request Item</a></li>
+				<!--action="10" form="21" for default request-->
+				<!--li><a href="<#ACTION action="10" form="20" value="GenericRequestMonograph">">Monograph</a></li>
+				<li><a href="<#ACTION action="10" form="20" value="GenericRequestSerial">">Serial</a></li>
+				<li><a href="<#ACTION action="10" form="20" value="GenericRequestManuscript">">Manuscript/Archives</a></li>
+				<li><a href="<#ACTION action="10" form="23">">Photoduplication</a></li-->
+			</ul>
+		</li>
+		<li class="active"><a href="#">Requests</a>
+			<ul>
+				<li class="first"><a href="<#ACTION action="10" form="76">">Review Requests to Submit</a></li>
+				<li><a href="<#ACTION action="10" form="62">">Outstanding Requests</a></li>
+				<li><a href="<#ACTION action="10" form="70">">Cancelled Requests</a></li>
+				<li><a href="<#ACTION action="10" form="68">">Completed Requests</a></li>
+				<li><a href="<#ACTION action="10" form="60">">All Requests</a></li>				
+			</ul>
+		</li>
+		
+		 <li class="active"><a href="#">Search Requests</a>
+        	<ul id="menusearch">
+            	<li>
+        
+		<form action="Aeon.dll" name="Search" method="post">
+			<input type="hidden" name="AeonForm" value="Search" />
+			<input id="SessionID" name="SessionID" type="hidden" value="<#PARAM name="SessionID">" />
+			<label for="SearchCriteria">
+				<input id="SearchCriteria" name="SearchCriteria" type="text" class="f-criteria" />
+			</label>
+			<input type="submit" name="SubmitButton" value="Search" class="f-submit" />
+			
+				<!--input name="SearchType" type="radio" id="SearchTypeActive" value="Active" class="f-searchType" /><label for="SearchTypeActive">Active</label>
+				<input name="SearchType" type="radio" id="SearchTypeAll" value="All" checked class="f-searchType" /><label for="SearchTypeAll">All</label-->
+			
+		</form>
+		</li></ul></li>
+		
+		<!--li class="active"><a href="#">Orders</a>
+			<ul>
+				<!--li><a href="<#ACTION action="10" form="77">">Order Estimates</a></li>
+				<li><a href="<#ACTION action="10" form="78">">Order Billing</a></li>
+				<li><a href="<#ACTION action="10" form="64">">Delivered Items</a></li-->				
+			<!--/ul>
+		</li-->
+		<li class="active"><a href="#">Events</a>
+			<ul>
+				<li class="first"><a href="<#ACTION action="10" form="90">">Events</a></li>
+			</ul>
+		</li>
+		<li class="active"><a href="#">Preferences</a>
+			<ul>
+				<li class="first"><a href="<#ACTION action="10" form="81">">Change User Information</a></li>
+				<!--li class="last"><a href="<#ACTION action="10" form="83">">Change Password</a></li-->
+			</ul>
+		</li>
+		<li class="active"><a href="<#ACTION action="10" form="1">">About Aeon</a></li>
+		<li><a href="<#ACTION action="2" type="40" value="RSSID" valueType="lookup" absolutePath="true" includeSessionID="false">">Subscribe to Alerts Feed</a><br />
+            	<#ALERTS></li>
+	</ul>
+</div>

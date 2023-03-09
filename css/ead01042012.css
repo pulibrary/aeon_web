@@ -1,0 +1,490 @@
+/* New and checked styles */
+/* Menu */
+
+ul#menu {
+   margin: 3em 0 0 1%;
+   padding: 0;
+   width: 10em;
+   min-width: 170px;
+   clear: both;
+   text-align: left;
+   position: fixed;
+   left: 0;
+   border-bottom: 1px solid #ccc;
+}
+
+ul#menu li {
+   cursor: pointer;
+   background-color: #ffffff;
+   color: inherit;
+   border-left: 1px solid #ccc;
+   border-top: 1px solid #ccc;
+   border-right: 1px solid #ccc;
+   text-align: left;
+   list-style-type: none;
+   padding: .5em;
+}
+
+ul#menu li.menuRepoLink {
+   text-align: center;
+   font-weight: bold;
+   color: #f58025;
+   background-color: #555;
+   border-left: 1px solid #f58025;
+   border-top: 1px solid #f58025;
+   border-right: 1px solid #f58025;
+}
+
+ul#menu li.menuRepoLink a {
+   font-weight: bold;
+}
+
+ul#menu li a:hover {
+   text-decoration: underline;
+}
+
+ul#menu li option.selected {
+   font-weight: bold;
+}
+
+ul#menu li.dropdown {
+  margin: 0;
+  padding: 0;
+}
+
+ul#menu li.dropdown select{
+   width: 100%;
+   min-width: 160px;
+   margin: .5em 0;
+   padding: 0;
+   
+}
+
+/* Headings */
+/* h1 and h2 inherited from site */
+
+h3 {
+   font-size: 140%;
+   color: #555;
+   background-color: inherit;
+   padding: 1em 0;
+   text-align: center;
+   border: none;
+}
+
+h3#callno {
+  padding: 0 0 1em 0;
+  /*text-decoration: blink;
+  color: red;*/
+}
+
+h4 {
+   font-weight: bold;
+   font-size: larger;
+   color: #555;
+   background-color: inherit;
+   padding: .5em 0 0 0;
+   border-bottom: 2px dotted #B59E7B;
+}
+
+h4#dsc {
+   margin: 0;
+   padding: .5em 0 0 0;
+}
+
+h5 {
+   color: #555;
+   background-color: inherit;
+   font-weight: bold;
+   margin: .5em 0;
+   font-size: 100%;
+}
+
+h6 {
+   color: #555;
+   background-color: inherit;
+   font-weight: bold;
+   margin: .5em 0 0 0;
+   font-size: 100%;
+}
+/* The body of the ead */
+
+div#mainContent {
+   padding: 0;
+   margin: 0 0 1em 16em;
+/* see width of menu (ul#menu) */
+   float: right;
+}
+
+
+/* Block level elements */
+
+div.address { /*stupid ie...*/
+  text-align: center;
+}
+
+address {
+   font-style: normal;
+   width: 100%;
+   text-align: center;
+}
+
+p {
+   margin: .5em 0;
+   font-weight: normal;
+   clear: both;
+}
+
+p.sponsor {
+   text-align: center;
+   margin: 1em 0;
+}
+
+p.copyright {
+   margin-top: 1em;
+   font-weight: bold;
+   text-align: center;
+}
+
+p.normalIndent {
+   margin: 0 0 0 2em;
+}
+
+p.cHead {
+   font-weight: bold;
+}
+
+p.publicationDate {
+   margin-top: 1em;
+   text-align: center;
+}
+
+p.ark {
+  text-align: center;
+  padding: 0 0 0 0;
+}
+
+
+p.print {
+  text-align: center;
+  border-bottom: 1px solid #000;
+  padding: 0 0 .5em 0;
+}
+
+
+
+
+
+div.daoPortrait {
+   text-align: center;
+   border: 0;
+}
+/* Lists */
+
+div#header {
+   margin: 1em 0 0 0;
+}
+
+div#header a {
+  text-decoration: none;
+}
+
+
+ul.places {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-top: .5em;
+
+}
+
+
+dt.archdescLabel {
+   color: #555;
+   background-color: inherit;
+   font-weight: bold;
+   margin: 1em 0 0 0;
+}
+
+dd.archdescData {
+   margin: .5em 0 0 2em;
+}
+
+ol.chronlist {
+   list-style-type: none;
+}
+
+ol.chronlist>li {
+   padding: 0 0 .25em 0;
+}
+
+ul.normalIndent {
+/*   list-style-type: circle;*/
+   margin: .5em 0 0 3em;
+}
+
+ul.normal {
+   list-style-type: circle;
+   margin: .5em 0 0 0;
+}
+
+ul.normal, ul.normalIndent li.normal {
+   margin: .5em 0 0 0;
+   list-style-type: disc;
+}
+
+ul.index {
+   margin: 0;
+}
+
+ul.index li {
+   margin: 0;
+}
+
+li.arrangementSeries {
+   margin: .5em 0 0 0;
+   list-style-type: disc;
+}
+
+li.arrangementSubseries {
+   margin: .5em 0 0 0;
+   padding: 0 0 0 3em;
+   list-style-type: circle;
+   list-style-position: inside;
+}
+/* Annoying inline/mixed content elements */
+.italic {
+   font-style: italic;
+}
+
+.bold {
+   font-weight: bold;
+}
+
+.underline {
+   text-decoration: underline;
+}
+
+.bolditalic {
+   font-style: italic;
+   font-weight: bold;
+}
+
+.boldunderline {
+   text-decoration: underline;
+   font-weight: bold;
+}
+/* Links */
+a:link {
+   color: #f58025;
+   background-color: inherit;
+   font-weight: normal;
+}
+
+a:visited {
+   color: #f58025;
+   font-weight: normal;
+}
+
+a:visited:hover {
+   color: #f58025;
+   font-weight: normal;
+   text-decoration: underline;
+}
+
+a:hover {
+   text-decoration: underline;
+   color: #f58025;
+}
+
+ul#menu a, p.print a {
+   color: #f58025;
+   background-color: inherit;   
+}
+
+/* the dsc... */
+#dsc * {
+   font-size: 100%;
+}
+
+ol.contents {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   color: #555;
+   background-color: inherit;
+}
+
+ol.contents li.even {
+   background-color:#E9D3C0;
+   color: inherit;
+}
+
+ol.contents li.odd {
+   background-color: inherit;
+   color: inherit;
+}
+
+ol.contents p {
+   margin: .25em 0;
+   padding: 0;
+}
+
+ol.contents h5,
+ol.contents h6 {
+   margin: 0;
+   padding: 0;
+   font-weight: bold;
+}
+/* I'm not proud of this, but it works... */
+
+
+
+table.c01 {
+   width: 99%;
+   padding: .25em .25em .25em 1%;
+   
+}
+
+table.c01 td.data {
+   width: 74%;
+   margin: 0;
+   padding: 0;
+}
+
+table.c01 td.container {
+   width: 25%;
+   margin: 0;
+   padding: 0;
+}
+
+
+table.c02 {
+   width: 97%;
+   margin: .25em .25em .25em 3%;
+   padding: 0;
+}
+
+table.c02 td.data {
+   width: 72%;
+   margin: 0;
+   padding: 0;
+}
+
+table.c02 td.container {
+   width: 24%;
+   margin: 0;
+   padding: 0;
+}
+
+
+table.c03 {
+   width: 95%;
+   margin: .25em .25em .25em 5%;
+   padding: 0;
+}
+
+table.c03 td.data {
+   width: 70%;
+   margin: 0;
+   padding: 0;
+}
+
+table.c03 td.container {
+   width: 24%;
+   margin: 0;
+   padding: 0;
+}
+
+
+
+table.c04 {
+   width: 93%;
+   margin: .25em .25em .25em 7%;
+   padding: 0;
+}
+
+table.c04 td.data {
+   width: 68%;
+   margin: 0;
+   padding: 0;
+}
+
+table.c04 td.container {
+   width: 24%;
+   margin: 0;
+   padding: 0;
+}
+
+table.c05 {
+   width: 91%;
+   margin: .25em .25em .25em 9%;
+   padding: 0;
+}
+
+table.c05 td.data {
+   width: 66%;
+   margin: 0;
+   padding: 0;
+}
+
+table.c05 td.container {
+   width: 24%;
+   margin: 0;
+   padding: 0;
+}
+
+
+table.c06 {
+   width: 89%;
+   margin: .25em .25em .25em 11%;
+   padding: 0;
+}
+
+table.c06 td.data {
+   width: 64%;
+   margin: 0;
+   padding: 0;
+}
+
+table.c06 td.container {
+   width: 24%;
+   margin: 0;
+   padding: 0;
+}
+
+
+table.c07 {
+   width: 87%;
+   margin: .25em .25em .25em 13%;
+   padding: 0;
+}
+
+table.c07 td.data {
+   width: 62%;
+   margin: 0;
+   padding: 0;
+}
+
+table.c07 td.container {
+   width: 24%;
+   margin: 0;
+   padding: 0;
+}
+
+table.c08 {
+   width: 85%;
+   margin: .25em .25em .25em 15%;
+   padding: 0;
+}
+
+table.c08 td.data {
+   width: 60%;
+   margin: 0;
+   padding: 0;
+}
+
+table.c08 td.container {
+   width: 24%;
+   margin: 0;
+   padding: 0;
+}

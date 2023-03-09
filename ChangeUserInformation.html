@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Special Collections Research Account - Change User Information</title>
+  <#INCLUDE filename="include_head.html">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.9/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.9/js/select2.min.js"></script>
+  <script>
+    $(document).ready(function() {
+        $('.current-status input').each(function() {
+          var value = "<#PARAM name='Status'>";
+          if($(this).val() === value) {
+            $(this).attr('checked', 'checked');
+          }
+        });
+
+        $('select').each(function () {
+            $(this).select2();
+        });
+    });
+  </script>
+
+  <style>
+    .three_nine-region--second label {
+      margin: 0 0 0.25rem;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    .select2-container {
+      margin-bottom: 1rem;
+      max-width: 100%;
+    }
+
+    fieldset {
+      padding: 0;
+      border: 0;
+    }
+
+    legend {
+      margin-bottom: 0.25rem;
+      font-weight: 500;
+    }
+
+    fieldset input {
+      margin: 5px;
+    }
+
+    fieldset div {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .optional {
+      font-weight: 400;
+    }
+        
+    #status span {
+      background: #ce1400;
+    }
+
+    #status span.statusNormal {
+      background: #2762ae;
+    }
+  </style>
+</head>
+
+<body id="type-b">
+  <#INCLUDE filename="include_header.html">
+    <div id="content-wrap" class="panel-display--three_nine l-page">
+      <section class="l-main">
+        <nav role="navigation" aria-label="illiad navigation" class="three_nine-region--first">
+          <#INCLUDE filename="include_menu.html">
+        </nav>
+        <main role="main" id="main-content" class="three_nine-region--second">
+          <div id="status">
+            <#STATUS>
+          </div>
+          <form action="aeon.dll" method="post" name="ChangeUserInformation" class="f-wrap-request">
+            <input type="hidden" name="AeonForm" value="ChangeUserInformation">
+            <input type="hidden" name="NotificationMethod" value="Email">
+            <input type="hidden" name="NVTGC" value="ILL">
+            <input type="hidden" name="DeliveryGroup" value="Hold for Pickup">
+            <input type="hidden" name="LoanDeliveryGroup" value="Hold for Pickup">
+            <input type="hidden" name="WebDeliveryGroup" value="Yes">
+            <input type="hidden" name="Country" value="United States">
+            <input type="hidden" name="Organization" value="Princeton University Community Member">
+
+              <h1>Change Personal Information</h1>
+              <div class="req-indicator" aria-hidden="true"><span class="req">*</span> Indicates required field</div>
+              <label for="FirstName">
+                <span class="<#ERROR name='ERRORFirstName'>"><span class="bold">First Name</span></span>
+                <span class="req" aria-hidden="true">*</span>
+              </label>
+              <input id="FirstName" name="FirstName" type="text" size="40" class="f-name" value="<#PARAM name='FirstName'>" autocomplete="given-name" required aria-required="true">
+             
+              <label for="LastName">
+                <span class="<#ERROR name='ERRORLastName'>"><span class="bold">Last Name</span></span>
+                <span class="req" aria-hidden="true">*</span>
+              </label>
+              <input id="LastName" name="LastName" type="text" size="40" class="f-name" value="<#PARAM name='LastName'>" autocomplete="family-name" required aria-required="true">
+
+              <label for="EmailAddress">
+                <span class="<#ERROR name='ERROREmailAddress'>"><span class="bold">Email</span></span>
+                <span class="req" aria-hidden="true">*</span>
+              </label>
+              <input id="EmailAddress" name="EmailAddress" type="text" size="40" class="f-name" value="<#PARAM name='EmailAddress'>" required aria-required="true">
+
+                  <label for="Phone">
+                    <span class="<#ERROR name='ERRORPhone'>"><span class="bold">Telephone <span class="optional">(Cell or Campus)<span class="optional"></span></span>
+                    <span class="req" aria-hidden="true">*</span>
+                  </label>
+                  <input id="Phone" name="Phone" type="text" size="40" class="f-name" value="<#PARAM name='Phone'>" required aria-required="true">
+
+              <fieldset class="current-status">
+                <legend for="Status">Status <span class="req" aria-hidden="true">*</span></legend>
+                <div>
+                  <input type="radio" name="Status" id="FacultyandProfStaff" value="FacultyandProfStaff" required aria-required="true">
+                  <label for="FacultyandProfStaff">Faculty/Staff</label>
+                </div>
+                <div>
+                  <input type="radio" name="Status" id="GraduateStudent" value="GraduateStudent">
+                  <label for="GraduateStudent">Graduate student</label>
+                </div>
+                <div>
+                  <input type="radio" name="Status" id="UndergraduateStudent" value="UndergraduateStudent">
+                  <label for="UndergraduateStudent">Undergraduate student</label>
+                </div>
+              </fieldset>
+              
+              <label for="ResearchTopics">
+                <span class="<#ERROR name='ERRORResearchTopics'>"><span class="bold">Research Topic</span> <span class="optional">(Optional)</span></span>
+              </label>
+              <input id="ResearchTopics" name="ResearchTopics" type="text" size="40" class="f-name" value="<#PARAM name='ResearchTopics'>">
+              
+              <div class="f-submit-wrap">
+                <button class="btn btn-primary btn-md" type="submit" name="SubmitButton" value="Submit Information">Submit Information</button>
+              </div>
+          </form>
+        </main>
+      </section>
+    </div>
+    <#INCLUDE filename="include_footer.html">
+</body>
+
+</html>

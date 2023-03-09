@@ -1,0 +1,450 @@
+form.f-wrap-request
+{
+    background-color: #F4F0E4;
+}
+
+/* Headings */
+/* h1 and h2 inherited from site */
+
+h3
+{
+    font-size: 140%;
+    color: #555;
+    background-color: inherit;
+    padding: 1em 0;
+    text-align: center;
+    border: none;
+}
+
+h3#callno
+{
+    padding: 0 0 1em 0;
+}
+
+h4
+{
+    font-weight: bold;
+    font-size: larger;
+    color: #555;
+    background-color: inherit;
+    padding: .5em 0 0 0;
+    border-bottom: 2px dotted #B59E7B;
+}
+
+h4#dsc
+{
+    margin: 0;
+    padding: .5em 0 0 0;
+}
+
+h5
+{
+    color: #555;
+    background-color: inherit;
+    font-weight: bold;
+    margin: .5em 0;
+    font-size: 100%;
+    border-bottom-width: 0;
+}
+
+h6
+{
+    color: #555;
+    background-color: inherit;
+    font-weight: bold;
+    margin: .5em 0 0 0;
+    font-size: 100%;
+}
+/* The body of the ead */
+
+div#mainContent
+{
+    padding: 0;
+    margin: 0 0 1em 16em; /* see width of menu (ul#menu) */
+    float: right;
+}
+
+
+/* Block level elements */
+
+div.address
+{
+    /*stupid ie...*/
+    text-align: center;
+}
+
+address
+{
+    font-style: normal;
+    width: 100%;
+    text-align: center;
+}
+
+p
+{
+    margin: .5em 0;
+    font-weight: normal;
+    clear: both;
+}
+
+p.sponsor
+{
+    text-align: center;
+    margin: 1em 0;
+}
+
+p.copyright
+{
+    margin-top: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+p.normalIndent
+{
+    margin: 0 0 0 2em;
+}
+
+p.cHead
+{
+    font-weight: bold;
+}
+
+p.publicationDate
+{
+    margin-top: 1em;
+    text-align: center;
+}
+
+p.ark
+{
+    text-align: center;
+    padding: 0 0 0 0;
+}
+
+
+p.print
+{
+    text-align: center;
+    border-bottom: 1px solid #000;
+    padding: 0 0 .5em 0;
+}
+
+
+
+
+
+div.daoPortrait
+{
+    text-align: center;
+    border: 0;
+}
+/* Lists */
+
+div#header
+{
+    margin: 1em 0 0 0;
+}
+
+div#header a
+{
+    text-decoration: none;
+}
+
+
+ul.places
+{
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-top: .5em;
+}
+
+
+dt.archdescLabel
+{
+    color: #555;
+    background-color: inherit;
+    font-weight: bold;
+    margin: 1em 0 0 0;
+}
+
+dd.archdescData
+{
+    margin: .5em 0 0 2em;
+}
+
+ol.chronlist
+{
+    list-style-type: none;
+}
+
+ol.chronlist > li
+{
+    padding: 0 0 .25em 0;
+}
+
+ul.normalIndent
+{
+    /*   list-style-type: circle;*/
+    margin: .5em 0 0 3em;
+}
+
+ul.normal
+{
+    list-style-type: circle;
+    margin: .5em 0 0 0;
+}
+
+ul.normal, ul.normalIndent li.normal
+{
+    margin: .5em 0 0 0;
+    list-style-type: disc;
+}
+
+ul.index
+{
+    margin: 0;
+}
+
+ul.index li
+{
+    margin: 0;
+}
+
+li.arrangementSeries
+{
+    margin: .5em 0 0 0;
+    list-style-type: disc;
+}
+
+li.arrangementSubseries
+{
+    margin: .5em 0 0 0;
+    padding: 0 0 0 3em;
+    list-style-type: circle;
+    list-style-position: inside;
+}
+/* Annoying inline/mixed content elements */
+.italic
+{
+    font-style: italic;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.underline
+{
+    text-decoration: underline;
+}
+
+.bolditalic
+{
+    font-style: italic;
+    font-weight: bold;
+}
+
+.boldunderline
+{
+    text-decoration: underline;
+    font-weight: bold;
+}
+/* Links */
+a:link
+{
+    color: #f58025;
+    background-color: inherit;
+    font-weight: normal;
+}
+
+a:visited
+{
+    color: #f58025;
+    font-weight: normal;
+}
+
+a:visited:hover
+{
+    color: #f58025;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+a:hover
+{
+    text-decoration: underline;
+    color: #f58025;
+}
+
+ul#menu a, p.print a
+{
+    color: #f58025;
+    background-color: inherit;
+}
+
+/* the dsc... */
+#dsc *
+{
+    font-size: 100%;
+}
+
+div.topLevelCheckbox
+{
+    text-align: left;
+    clear: both;
+}
+
+div.topLevelCheckbox span.data
+{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    display: inline-block;
+}
+
+div.c01
+{
+    clear: both;
+    padding-left: 0;
+    width: 100%;
+}
+
+div.c01 span.data
+{
+    width: 70%;
+    float: left;
+}
+
+div.c02
+{
+    clear: both;
+    padding-left: 3%;
+    width: 100%;
+}
+
+div.c02 span.data
+{
+    width: 67%;
+    float: left;
+}
+
+div.c03
+{
+    clear: both;
+    padding-left: 6%;
+    width: 100%;
+}
+
+div.c03 span.data
+{
+    width: 64%;
+    float: left;
+}
+
+div.c04
+{
+    clear: both;
+    padding-left: 9%;
+    width: 100%;
+}
+
+div.c04 span.data
+{
+    width: 61%;
+    float: left;
+}
+
+div.c05
+{
+    clear: both;
+    padding-left: 12%;
+    width: 100%;
+}
+
+div.c05 span.data
+{
+    width: 58%;
+    float: left;
+}
+
+div.c06
+{
+    clear: both;
+    padding-left: 15%;
+    width: 100%;
+}
+
+div.c06 span.data
+{
+    width: 55%;
+    float: left;
+}
+
+div.c07
+{
+    clear: both;
+    padding-left: 18%;
+    width: 100%;
+}
+
+div.c07 span.data
+{
+    width: 52%;
+    float: left;
+}
+
+div.c08
+{
+    clear: both;
+    padding-left: 21%;
+    width: 100%;
+}
+
+div.c08 span.data
+{
+    width: 49%;
+    float: left;
+}
+
+span.checkbox
+{
+    width: 4%;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 0;
+    margin-right: 0;
+    float: left;
+}
+
+span.container
+{
+    width: 23%;
+    float: left;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 1em;
+    margin-right: 0;
+    font-weight: normal;
+}
+
+div.even
+{
+    background-color: #E9D3C0;
+    color: inherit;
+    overflow: hidden;
+    padding-left: 0.5em;
+}
+
+div.odd
+{
+    background-color: inherit;
+    color: inherit;
+    overflow: hidden;
+    padding-left: 0.5em;
+}
+
+

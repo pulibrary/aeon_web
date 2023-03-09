@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Special Collections Research Account - New User Registration</title>
+  <#INCLUDE filename="include_head.html">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.9/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.9/js/select2.min.js"></script>
+  <script>
+    $(document).ready(function() {
+        $('.current-status input').each(function() {
+          var value = "<#PARAM name='Status'>";
+          if($(this).val() === value) {
+            $(this).attr('checked', 'checked');
+          }
+        });
+
+        $('select').each(function () {
+            $(this).select2();
+        });
+    });
+  </script>
+
+  <style>
+    .three_nine-region--second label {
+      margin: 0 0 0.25rem;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    .select2-container {
+      margin-bottom: 1rem;
+      max-width: 100%;
+    }
+
+    fieldset {
+      padding: 0;
+      border: 0;
+    }
+
+    legend {
+      margin-bottom: 0.25rem;
+      font-weight: 500;
+    }
+
+    fieldset input {
+      margin: 5px;
+    }
+
+    fieldset div {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .optional {
+      font-weight: 400;
+    }
+        
+    #status span {
+      background: #ce1400;
+    }
+
+    #status span.statusNormal {
+      background: #2762ae;
+    }
+  </style>
+</head>
+
+<body id="type-b">
+  <#INCLUDE filename="include_header.html">
+    <div id="content-wrap" class="panel-display--three_nine l-page">
+      <section class="l-main">
+        <nav role="navigation" aria-label="illiad navigation" class="three_nine-region--first">
+          <#INCLUDE filename="include_menu.html">
+        </nav>
+        <main role="main" id="main-content" class="three_nine-region--second">
+          <div id="status">
+            <#STATUS>
+          </div>
+          <h1>User Registration</h1>
+          <form action="aeon.dll" method="post" name="NewAuthRegistration" class="f-wrap-request">
+            <input type="hidden" name="AeonForm" value="NewAuthRegistration">
+            <input type="hidden" name="NotificationMethod" value="Email">
+            <input type="hidden" name="NVTGC" value="ILL">
+            <input type="hidden" name="DeliveryGroup" value="Hold for Pickup">
+            <input type="hidden" name="LoanDeliveryGroup" value="Hold for Pickup">
+            <input type="hidden" name="WebDeliveryGroup" value="Yes">
+            <input type="hidden" name="NotificationMethod" value="E-Mail">
+            <input type="hidden" name="Organization" value="Princeton University Community Member">
+            <input type="hidden" name="Country" value="United States">
+            <#FORMSTATE>
+              <h2>Terms and Conditions</h2>
+                <p>
+                  Princeton University Library welcomes all researchers to its special collections reading rooms in the Harvey S. Firestone Library, Seeley G. Mudd Manuscript Library, and Marquand Library of Art and Archaeology. To submit a request to view materials, readers must first register for a Special Collections Research Account.
+                </p>
+                <p>
+                  <strong>Patrons without a Princeton University ID must obtain a Special Collections Access Card upon arrival.  Access cards are issued at the Access Office, located in the Firestone Library.</strong>
+                </p>
+                <h3>Rules for use of the collections</h2>
+                <p>
+                  Reading room privileges are granted subject to specific rules that are intended to protect collections in the Princeton University Library Special Collections and insure their preservation for future researchers.</p>
+                <ul>
+                  <li>Completion of registration with valid photo identification will be required upon arrival. <strong>Patrons without a Princeton University ID must obtain a Special Collections Access Card upon arrival.  Access cards are issued at the Access Office, located in the Firestone Library.</strong>
+                  </li>
+                  <li>Patrons must wear their Princeton University ID or Access Card to enter the Special Collections reading rooms.</li>
+                  <li>Only pencils, laptop computers, and approved digital cameras are permitted in the reading room. The libraries will supply paper for reading room use. An Authorization Form dated and signed by a staff member must be submitted in order to use personal copies of books, personal papers, or digital cameras. Cell phone use is prohibited.</li>
+                  <li>Personal belongings, including coats, rain gear, purses, briefcases, computer cases, camera bags, bound notepads, parcels, envelopes and closed folders are not permitted in the reading rooms. </li>
+                  <li>Personal articles will be inspected as researchers leave the room.</li>
+                  <li>All requests for materials must be placed 30 minutes prior to closing.</li>
+                  <li>Eating, drinking, chewing gum, and hard candies are prohibited in all areas.</li>
+                </ul>
+                <h3>Handling the materials</h3>
+                <ul>
+                  <li>Occasionally written permission is required to use Special Collections holdings, and some are closed for a period by the donor. Consult with staff concerning access to these collections.</li>
+                  <li>Access may be denied when papers are awaiting processing or when their physical condition warrants. Consult with staff concerning these restrictions.</li>
+                  <li>Materials must not be marked on, defaced, leaned on, altered, folded anew, or traced on. They are not to be placed in the lap or propped against edge of the table. Book supports may be used where appropriate. Use of gloves may be required to handle photographic and other fragile material. Photographs may not be removed from mylar coverings without permission.</li>
+                  <li>The existing order and arrangement of material must be maintained. If an item seems to be out of order, please inform a staff member.</li>
+                </ul>
+                <h3>Photoduplication</h3>
+                <ul>
+                  <li>Permission must be granted for the use of tape recorders, digital cameras, and other special equipment. Use of tripods, copy stands, flash, personal copiers, and scanners is not allowed.</li>
+                  <li>All approved digital camera self-photography requests are for personal reference purposes only and cannot be reproduced; transferred to any other individual, institution, or collection; exhibited; performed; broadcast; published; posted on the internet; or used commercially.</li>
+                  <li>Photoduplication is the responsibility of Princeton University staff. Most forms of duplication can be made available, with appropriate fees applied, but may be limited with particular materials and collections for a variety of reasons, including but not restricted to physical condition, format, legal and donor-imposed restrictions, etc. </li>
+                  <li>All photoduplication requests are contingent upon curatorial approval. The library reserves the right to refuse a request, or to limit the amount or format of duplication. Entire books or manuscript boxes (or substantial portions of either) will not be duplicated (unless otherwise authorized by curator). </li>
+                </ul>
+                <h3>Publication</h3>
+                <h3>Notice Warning Concerning Copyright Restrictions</h3>
+                <p>The copyright law of the United States (Title 17, United States Code) governs the making of photocopies or other reproductions of copyrighted material. Under certain conditions specified in the law, libraries and archives are authorized to furnish a photocopy or other reproduction. One of these specified conditions is that the photocopy or reproduction is not to be “used for any purpose other than private study, scholarship, or research.” If a user makes a request for, or later uses, a photocopy or reproduction for purposes in excess of “fair use,” that user may be liable for copyright infringement. This institution reserves the right to refuse to accept a copying order if, in its judgment, fulfillment of the order would involve violation of copyright law.</p>
+                <h3>Rights and Permissions</h3>
+                <p>Researchers must make a written request for permission to quote or publish manuscripts in the Department of Special Collections, or for one-time permission to reproduce images of any items found in the Department. In most cases, Princeton University owns only the physical item, not the literary property or copyright, and therefore assumes no responsibility for violations of such rights or for any other legal issues resulting from the use or publication of the items. It is the responsibility of the researcher to secure permission from the appropriate copyright holder to quote, publish, or reproduce items from Princeton collections, and to acknowledge in print that the materials are used or published “with permission of the Princeton University Library.” Fees for the reproduction or broadcast of any materials from the collections may apply depending on medium, distribution size, intended audience, and holding location. The library requests gratis copies of any publication that includes images from its collections.</p>
+                <h3>Security</h3>
+                <p>For protection of the materials, security devices, such as CCTV, still cameras, and alarms, are in use in special collections reading rooms in the Department of Special Collections. Video records are maintained as long as is necessary.</p>
+                <h3>Data Collection and Use</h3>
+                <p>The Princeton University Library may retain, indefinitely, all data and information regarding patron use of special collections items, including registration, circulation, duplication and publishing requests, as well as related correspondence. This information may be shared with third parties to address issues of legality, security, the administration of library collections, and other endeavors in support of the mission of Princeton University.</p>
+                <p><strong>I AGREE TO INDEMNIFY, HOLD HARMLESS, AND RELEASE PRINCETON UNIVERSTY, ITS TRUSTEES, OFFICERS, ADMINISTRATORS, FACULTY, STAFF, AND OTHER EMPLOYEES OR AGENTS AGAINST ANY AND ALL CLAIMS, DEMANDS, LIABILITES, DAMAGES, COSTS, AND EXPENSES INCLUDING ATTORNEY’S FEES, WITHOUT LIMITATION, INCURRED THROUGH THE USE OF THE PRINCETON UNIVERSITY LIBRARY AND ITS MATERIAL.</strong></p>
+                <hr />
+                <p><strong>Continuing with your registration below indicates your acknowledgement of having read the above rules and regulations and confirms your agreement to observe them.</strong></p>
+                <div class="req-indicator-wrapper">
+                  <h2>First-time User Registration Form</h2>
+                  <div class="req-indicator"><span class="req">*</span> Indicates required field</div>
+                </div>
+                
+                <div class="req-indicator" aria-hidden="true"><span class="req">*</span> Indicates required field</div>
+                <label for="FirstName">
+                  <span class="<#ERROR name='ERRORFirstName'>"><span class="bold">First Name</span></span>
+                  <span class="req" aria-hidden="true">*</span>
+                </label>
+                <input id="FirstName" name="FirstName" type="text" size="40" class="f-name" value="<#PARAM name='FirstName'>" autocomplete="given-name" required aria-required="true">
+                
+                
+                <label for="LastName">
+                  
+                  <span class="<#ERROR name='ERRORLastName'>"><span class="bold">Last Name</span></span>
+                  <span class="req" aria-hidden="true">*</span>
+                </label>
+                <input id="LastName" name="LastName" type="text" size="40" class="f-name" value="<#PARAM name='LastName'>" autocomplete="family-name" required aria-required="true">
+                
+                <label for="EmailAddress">
+                  <span class="<#ERROR name='ERROREmailAddress'>"><span class="bold">Email</span></span>
+                  <span class="req" aria-hidden="true">*</span>
+                </label>
+                <input id="EmailAddress" name="EmailAddress" type="text" size="40" class="f-name" value="<#PARAM name='EmailAddress'>" required aria-required="true">
+  
+                <label for="Phone">
+                  <span class="<#ERROR name='ERRORPhone'>"><span class="bold">Telephone <span class="optional">(Cell or Campus)</span></span></span>
+                  <span class="req" aria-hidden="true">*</span>
+                </label>
+                <input id="Phone" name="Phone" type="text" size="40" class="f-name" value="<#PARAM name='Phone'>" required aria-required="true">
+
+                <fieldset class="current-status">
+                  <legend for="Status">Status <span class="req" aria-hidden="true">*</span></legend>
+                  <div>
+                    <input type="radio" name="Status" id="FacultyandProfStaff" value="FacultyandProfStaff" required aria-required="true">
+                    <label for="FacultyandProfStaff">Faculty/Staff</label>
+                  </div>
+                  <div>
+                    <input type="radio" name="Status" id="GraduateStudent" value="GraduateStudent">
+                    <label for="GraduateStudent">Graduate student</label>
+                  </div>
+                  <div>
+                    <input type="radio" name="Status" id="UndergraduateStudent" value="UndergraduateStudent">
+                    <label for="UndergraduateStudent">Undergraduate student</label>
+                  </div>
+                </fieldset>
+                
+                <label for="ResearchTopics">
+                  <span class="<#ERROR name='ERRORResearchTopics'>"><span class="bold">Research Topic</span> <span class="optional">(Optional)</span></span>
+                </label>
+                <input id="ResearchTopics" name="ResearchTopics" type="text" size="40" class="f-name" value="<#PARAM name='ResearchTopics'>">
+                
+                <div class="f-submit-wrap">
+                  <button class="btn btn-primary btn-md" type="submit" name="SubmitButton" value="Submit Information">Submit Information</button>
+                </div>
+          </form>
+        </main>
+      </section>
+    </div>
+    <#INCLUDE filename="include_footer.html">
+</body>
+
+</html>

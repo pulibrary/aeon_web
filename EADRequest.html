@@ -1,0 +1,85 @@
+<!--
+ Note: Unlike other Aeon web pages, on this page the input elements must have a name of "FormDataField" and
+       an ID matching the relevant Aeon field name.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Special Collections Research Account - EAD Requests</title>
+  <#INCLUDE filename="include_head.html">
+    <#INCLUDE filename="include_head_request.html">
+      <script type="text/javascript" src="EADRequest.js"></script>
+      <script>
+      $(document).ready(function() {
+        //Initialize the EAD Submission form
+        InitializeSubmissionForm();
+
+        //Add the onclick handler to the submit request button
+        //If the button text in include_request_buttons.html is changed, you must change the string value in the selector to match
+        $(':submit').click(function(event) {
+          SubmitEADForm(this, event);
+          return false;
+        });
+      });
+      </script>
+</head>
+
+<body id="type-b">
+  <#INCLUDE filename="include_header.html">
+    <div id="content-wrap" class="panel-display--three_nine l-page">
+      <section class="l-main">
+        <nav role="navigation" aria-label="illiad navigation" class="three_nine-region--first">
+          <#INCLUDE filename="include_menu.html">
+        </nav>
+        <main role="main" class="three_nine-region--second">
+          <div id="status">
+            <#STATUS>
+          </div>
+          <!--
+      Commented out original form declaration. New method requires javascript, but can handle large EADs
+      <form action="aeon.dll" method="post" name="EADRequest" class="f-wrap-request">
+      -->
+          <form action="" name="EADRequest_Original" class="f-wrap-request">
+            <input type="hidden" ID="AeonForm" name="FormDataField" value="EADRequest">
+            <input type="hidden" ID="Username" name="FormDataField" value="<#PARAM name="Username">">
+            <input type="hidden" ID="SessionID" name="FormDataField" value="<#PARAM name="SessionID">">
+            <input type="hidden" ID="DocumentType" name="FormDataField" value="Manuscript">
+            <input type="hidden" name="ItemInfo5" value="<#PARAM name="ItemInfo5">">
+              <h1>Finding Aid Requests</h1>
+              <div class="req-indicator"><span class="req">*</span> Indicates required field</div>
+              <#PARAM name="EADRequests">
+                <h2>Common Request Information</h2> Note: The notes will be used for all of the submitted requests.
+                <label for="Notes">
+                  <span class="field">
+                    <span class="<#ERROR name="ERRORNotes">"><span class="bold">Notes</span></span>
+                  <span class="note">Please include any additional information that might help us locate the specific items requested, as well as other pertinent information.</span>
+                  </span>
+                  <textarea id="Notes" name="FormDataField" rows="2" cols="40" class="f-name"><#PARAM name="Notes"></textarea>
+                </label>
+                <span class="<#PARAM name="RequestLinksVisible" enabled="RequestForEnabled " disabled="RequestForDisabled ">">
+                 <label for="RequestLink">
+                    <span class="field">
+                        <span class="<#ERROR name="ERRORRequestLink">"><span class="bold">Request for</span></span>
+                </span>
+                <select id="RequestLink" name="FormDataField" size="1" class="f-name" tabindex="0">
+                  <#OPTION name="RequestLinks">
+                </select>
+                </label>
+                </span>
+                <label for="UserReview">
+                  <span class="field">
+                <span class="<#ERROR name="ERRORUserReview">"><strong>Keep In Review</span>
+                <span class="note">Keep request in a review state before submitting to processing.</span>
+                  </span>
+                  <input id="UserReview" name="FormDataField" class="f-checkbox" tabindex="0" value="Yes" type="checkbox" <#CHECKED name="UserReview" default="false">>
+                </label>
+                <#INCLUDE filename="include_request_buttons.html">
+          </form>
+        </main>
+      </section>
+    </div>
+    <#INCLUDE filename="include_footer.html">
+</body>
+
+</html>
